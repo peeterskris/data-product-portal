@@ -322,7 +322,15 @@ export function DataOutputForm({ mode, formRef, dataProductId, modalCallbackOnSu
             >
                 <Select allowClear={false} options={options} />
             </Form.Item>
-            <Form.Item name={'platform_id'}>
+            <Form.Item
+                name={'platform_id'}
+                rules={[
+                    {
+                        required: true,
+                        message: t('Please select a platform'),
+                    },
+                ]}
+            >
                 <Radio.Group>
                     <Space wrap className={styles.radioButtonContainer}>
                         {dataPlatforms.map((dataPlatform) => (

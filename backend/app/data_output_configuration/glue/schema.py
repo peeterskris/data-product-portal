@@ -121,7 +121,7 @@ class GlueTechnicalAssetConfiguration(AssetProviderPlugin):
                 label="Access granularity",
                 type=UIElementType.Radio,
                 tooltip="Give write access to the entire schema or a single table",
-                required=True,
+                required=False,
                 radio=UIElementRadio(
                     initial_value=AccessGranularity.Schema,
                     options=[
